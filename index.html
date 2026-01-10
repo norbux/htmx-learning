@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ .Title }}</title>
+        <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    </head>
+    <body>
+        <h1>She says {{ .Message }}</h1>
+        <button hx-post="http://localhost:8080/clicked" hx-swap="innerHTML">
+            Click Me
+        </button>
+    </body>
+</html>
